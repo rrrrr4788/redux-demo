@@ -1,17 +1,22 @@
 import React from 'react';
 import './App.css';
 
-import store from './store';
+import Boy from './pages/boy';
+import Girl from './pages/girl';
 import { Provider } from 'react-redux';
-import ComA from './pages/ComA';
-import ComB from './pages/ComB';
+import store from './store';
 
 function App() {
 	return (
 		<Provider store={store}>
 			<div className='App'>
-				<ComA></ComA>
-				<ComB></ComB>
+				<div className='boy'>
+					<Boy></Boy>
+				</div>
+
+				<div className='girl'>
+					<Girl></Girl>
+				</div>
 			</div>
 		</Provider>
 	);

@@ -1,13 +1,17 @@
+// Girl component's state is false at its default
 const initState = {
-	count: 0,
+	status: false,
 };
-
-export function reducer(state = initState, action) {
+export function gifReducer(state = initState, action) {
 	console.log('reducer: ', action);
 	switch (action.type) {
-		case 'increment':
+		case 'activate_gif':
 			return {
-				count: state.count + 1,
+				status: true,
+			};
+		case 'deactivate_gif':
+			return {
+				status: false,
 			};
 		default:
 			return state;
